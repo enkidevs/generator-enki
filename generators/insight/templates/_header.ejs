@@ -1,0 +1,16 @@
+# <%= headline %>
+author: <%= username %>
+
+levels:
+<% levels.forEach(function(level){ %>
+  - <%= level %>
+<% }); %>
+type: <%= type %>
+
+<% if (typeof category !== 'undefined') { %>
+  category: <%= category %>
+<% } %>
+
+links:
+
+  - [link to learn more](https://enki.com)

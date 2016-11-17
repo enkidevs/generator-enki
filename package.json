@@ -1,0 +1,21 @@
+{
+  "name": "generator-enki",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "test": "standard"
+  },
+  "files": [
+    "generators/app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "to-slug-case": "1.0.0",
+    "yeoman-generator": "^0.24.1"
+  },
+  "devDependencies": {
+    "standard": "8.5.0"
+  }
+}
