@@ -31,8 +31,8 @@ module.exports = generators.Base.extend({
       name: 'color',
       message: 'What\'s the topic\'s color (in hex)?',
       validate: function (answer) {
-        if (answer.length !== 7) {
-          return 'Need to be in the shape of `#xxxxxx`'
+        if (answer.length !== 6) {
+          return 'Need to be in the shape of `xxxxxx` (without #)'
         }
         return true
       }
