@@ -2,6 +2,6 @@ language: <%= language %>
 
 deviconsClass: <%= deviconsClass %>
 
-color: <%= color %>
+color: '<%= color %>'
 
 description: Description of the topic goes here
