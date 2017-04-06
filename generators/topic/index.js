@@ -18,16 +18,6 @@ module.exports = generators.Base.extend({
       message: 'What\'s the topic\'s language?'
     }, {
       type: 'input',
-      name: 'deviconsClass',
-      message: 'What\'s the topic\'s devicons class?',
-      validate: function (answer) {
-        if (answer.indexOf('devicons-') !== 0) {
-          return 'Need to start with `devicons-`'
-        }
-        return true
-      }
-    }, {
-      type: 'input',
       name: 'color',
       message: 'What\'s the topic\'s color (in hex)?',
       validate: function (answer) {
