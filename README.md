@@ -11,6 +11,6 @@ npm install -g yo
 npm install -g generator-enki
 yo enki
 yo enki:topic
-yo enki:subtopic
+yo enki:course
 yo enki:workout
 ```
