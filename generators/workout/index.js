@@ -4,6 +4,12 @@ const fs = require('fs')
 const path = require('path')
 const toSlugCase = require('to-slug-case')
 
+const typeMap = {
+	'Insights list': 'insights-list',
+	'Game': 'game',
+	'Quizz': 'quizz'
+}
+
 module.exports = generators.Base.extend({
   // The name `constructor` is important here
   constructor: function () {
@@ -27,7 +33,7 @@ module.exports = generators.Base.extend({
       type: 'list',
       name: 'type',
       message: 'Type of workout:',
-      choices: ['Insights list'],
+      choices: ['Insights list', 'Game'],
       default: 0
     }, {
       type: 'confirm',
@@ -59,6 +65,7 @@ module.exports = generators.Base.extend({
 
   writing: function () {
 		this.answers.section = typeof this.sections.indexOf(this.answers.section) !== undefined ? this.sections.indexOf(this.answers.section) : -1
+		this.answers.type = typeMap[this.answers.type]
     this.fs.copyTpl(
       this.templatePath('workout.md'),
       this.destinationPath(toSlugCase(this.answers.name) + '/README.md'),
