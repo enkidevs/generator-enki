@@ -7,7 +7,7 @@ const toSlugCase = require('to-slug-case')
 const typeMap = {
 	'Insights list': 'insights-list',
 	'Game': 'game',
-	'Quizz': 'quizz'
+	'Quiz': 'quiz'
 }
 
 module.exports = generators.Base.extend({
