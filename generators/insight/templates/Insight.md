@@ -7,7 +7,7 @@ Insight content goes here
 ---
 ## Practice
 
-What does the fox says?
+What does the fox say?
 ???
 
 * right answer
@@ -17,7 +17,7 @@ What does the fox says?
 ---
 ## Revision
 
-What does the fox says?
+What does the fox say?
 ???
 
 * right answer
