@@ -5,10 +5,19 @@ levels:
 <% levels.forEach(function(level){ %>
   - <%= level %>
 <% }); %>
+
+tags:
+<% aspects.forEach(function(aspect){ %>
+  - <%= aspect %>
+<% }); %>
+
 type: <%= type %>
 <% if (typeof category !== 'undefined') { %>
 category: <%= category %>
 <% } %>
 links:
 
-  - '[link to learn more](https://enki.com)'
+  - '[link to official documentation](https://enki.com)'
+  - '[link to deeper dive blog post](https://enki.com)'
+  - '[link to a video](https://enki.com)'
+  - '[link to a discussion](https://enki.com)'
