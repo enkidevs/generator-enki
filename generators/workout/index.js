@@ -33,7 +33,7 @@ module.exports = generators.Base.extend({
       type: 'list',
       name: 'type',
       message: 'Type of workout:',
-      choices: ['Insights list', 'Game'],
+      choices: ['Insights list'],
       default: 0
     }, {
       type: 'confirm',
