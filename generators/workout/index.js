@@ -29,24 +29,6 @@ module.exports = generators.Base.extend({
       type: 'input',
       name: 'name',
       message: 'What\'s the workout\'s name?'
-    }, {
-      type: 'list',
-      name: 'type',
-      message: 'Type of workout:',
-      choices: ['Insights list'],
-      default: 0
-    }, {
-      type: 'confirm',
-      name: 'hasParent',
-      message: 'Is this workout following another one?',
-      default: false
-    }, {
-      type: 'input',
-      name: 'parent',
-      message: 'What\'s the slug of the parent workout?',
-      when: function (answers) {
-        return answers.hasParent
-      }
     }]
 
 		if (this.sections && this.sections.length) {
