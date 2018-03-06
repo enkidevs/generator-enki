@@ -41,6 +41,18 @@ module.exports = generators.Base.extend({
         }
         return true
       }
+    },
+    {
+      type: 'checkbox',
+      name: 'aspects',
+      message: 'Select the relevant aspects:',
+      choices: ['introduction', 'new', 'workout', 'deep', 'obscura'],
+      validate: function (answer) {
+        if (answer.length === 0) {
+          return 'Select at least one aspect.'
+        }
+        return true
+      }
     }, {
       type: 'list',
       name: 'type',
