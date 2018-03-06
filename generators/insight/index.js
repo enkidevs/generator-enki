@@ -45,7 +45,7 @@ module.exports = generators.Base.extend({
       type: 'list',
       name: 'type',
       message: 'Type of content:',
-      choices: ['Insight', 'Game'],
+      choices: ['Insight', 'Game', 'Exercise'],
       default: 0
     }, {
       type: 'list',
@@ -63,21 +63,6 @@ module.exports = generators.Base.extend({
       when: function (answers) {
         return answers.type === 'Insight'
       }
-    }, {
-      type: 'confirm',
-      name: 'hasParent',
-      message: 'Is this insight following another one?',
-      default: false,
-      when: function (answers) {
-        return answers.type === 'Insight'
-      }
-    }, {
-      type: 'input',
-      name: 'parent',
-      message: 'What\'s the slug of the parent insight?',
-      when: function (answers) {
-        return answers.hasParent
-      }
     }]).then(function (answers) {
       this.answers = answers
     }.bind(this))
@@ -85,7 +70,14 @@ module.exports = generators.Base.extend({
 
   writing: function () {
     const fileName = this.answers.type + '.md'
-    this.answers.type = this.answers.type === 'Insight' ? 'normal' : this.answers.gameType
+    switch(this.answers.type) {
+      case 'Insight':
+        this.answers.type = 'normal'
+      case 'Game':
+        this.answers.type = this.answers.gameType
+      case 'Exercise':
+        this.answers.type = 'exerciseList'
+    }
     this.fs.copyTpl(
       this.templatePath(fileName),
       this.destinationPath(toSlugCase(this.answers.headline) + '.md'),

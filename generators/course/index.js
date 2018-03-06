@@ -19,23 +19,15 @@ module.exports = generators.Base.extend({
       type: 'input',
       name: 'name',
       message: 'What\'s the course\'s name?'
-    }]
-
-		if (this.sections && this.sections.length) {
-			questions.push({
-				type: 'list',
-				name: 'section',
-				message: 'In which section is this course?',
-				choices: this.sections.concat('In no section'),
-				default: 0
-			})
-		}
-
-    return this.prompt([{
+    }, {
       type: 'input',
       name: 'name',
-      message: 'What\'s the course\'s name?'
-    }]).then(function (answers) {
+      message: 'How many sections in this course?'
+    }]
+
+
+
+    return this.prompt([]).then(function (answers) {
       this.answers = answers
     }.bind(this))
   },
