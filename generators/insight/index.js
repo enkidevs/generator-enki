@@ -57,7 +57,7 @@ module.exports = generators.Base.extend({
       type: 'list',
       name: 'type',
       message: 'Type of content:',
-      choices: ['Insight', 'Game'],
+      choices: ['Insight', 'Game', 'Exercise'],
       default: 0
     }, {
       type: 'list',
@@ -82,7 +82,14 @@ module.exports = generators.Base.extend({
 
   writing: function () {
     const fileName = this.answers.type + '.md'
-    this.answers.type = this.answers.type === 'Insight' ? 'normal' : this.answers.gameType
+    switch(this.answers.type) {
+      case 'Insight':
+        this.answers.type = 'normal'
+      case 'Game':
+        this.answers.type = this.answers.gameType
+      case 'Exercise':
+        this.answers.type = 'exerciseList'
+    }
     this.fs.copyTpl(
       this.templatePath(fileName),
       this.destinationPath(toSlugCase(this.answers.headline) + '.md'),
