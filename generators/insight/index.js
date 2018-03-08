@@ -1,5 +1,6 @@
 const generators = require('yeoman-generator')
 const toSlugCase = require('to-slug-case')
+const { URL } = require('url');
 
 module.exports = generators.Base.extend({
   // The name `constructor` is important here
@@ -66,6 +67,34 @@ module.exports = generators.Base.extend({
       choices: ['tetris', 'refactor', 'evaluateThis', 'fillTheGap', 'bugSpot', 'bugScroll'],
       when: function (answers) {
         return answers.type === 'Game'
+      }
+    }, {
+      type: 'list',
+      name: 'linkType',
+      message: 'Type of Exercise:',
+      choices: ['website', 'github', 'glitch', 'exercism', 'codewars', 'sqlfiddle', 'codepen'],
+      when: function (answers) {
+        return answers.type === 'Exercise'
+      }
+    }, {
+      type: 'input',
+      name: 'link',
+      message: 'Link to Exercise',
+      validate: function (answer) {
+        if (answer.indexOf('github.com') !== -1) return true
+        if (answer.indexOf('glitch.com') !== -1) return true
+        if (answer.indexOf('exercism.io') !== -1) return true
+        if (answer.indexOf('codewars.com') !== -1) return true
+        if (answer.indexOf('sqlfiddle.com') !== -1) return true
+        if (answer.indexOf('codepen.io') !== -1) return true
+        try {
+          if (new URL(answer).host) return true
+        } catch (e) {
+          return e
+        }
+      },
+      when: function (answers) {
+        return answers.type === 'Exercise'
       }
     }, {
       type: 'list',
