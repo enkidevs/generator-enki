@@ -1,10 +1,5 @@
 <%- include('_header'); %>
-linkType: website
-link: http://exercism.io
-answer: /some\sregex/
-standards:
-    cs.identify-linear-collection-data-structures-usage.0: 1000
-    cs.identify-linear-collection-data-structures-usage.3: 1000
+
 ---
 ## Exercise
 ### Question
