@@ -117,7 +117,7 @@ module.exports = generators.Base.extend({
       case 'Game':
         this.answers.type = this.answers.gameType
       case 'Exercise':
-        this.answers.type = 'exerciseList'
+        this.answers.type = 'exercise'
     }
     this.fs.copyTpl(
       this.templatePath(fileName),
