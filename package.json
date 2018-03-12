@@ -1,7 +1,7 @@
 {
   "name": "generator-enki",
   "version": "0.5.2",
-  "description": "",
+  "description": "Generates templates for Enki content",
   "scripts": {
     "test": "standard"
   },

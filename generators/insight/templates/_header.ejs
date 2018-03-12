@@ -13,13 +13,13 @@ tags:
     
 type: <%= type %>
 <% if (typeof category !== 'undefined') { %>
-  category: <%= category %>
+category: <%= category %>
 <% } %>
       
 <% if (typeof linkType !== 'undefined') { %>
-  linkType: <%= linkType %> 
-  link: <%= link %>
-  answer: /some\sregex/ (optional)
+linkType: <%= linkType %> 
+link: <%= link %>
+answer: /some\sregex/ (optional)
   
 <% } %>
 standards: 
@@ -33,4 +33,10 @@ links:
 - '[link to a video](https://enki.com)'
 - '[link to a discussion](https://enki.com)'
 ---        
+<% if (type === 'normal') { %>
+## Content
+<% } %>
+<% if (type === 'exercise') { %>
+## Exercise
+<% } %>
 # <%= headline %>
