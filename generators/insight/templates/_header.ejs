@@ -1,26 +1,26 @@
-# <%= headline %>
+---
 author: <%= username %>
 
 levels:
 <% levels.forEach(function(level){ %>
   - <%= level %>
-<% }); %>
-
+  <% }); %>
+  
 tags:
 <% aspects.forEach(function(aspect){ %>
   - <%= aspect %>
 <% }); %>
-
+    
 type: <%= type %>
 <% if (typeof category !== 'undefined') { %>
-category: <%= category %>
+  category: <%= category %>
 <% } %>
-
+      
 <% if (typeof linkType !== 'undefined') { %>
   linkType: <%= linkType %> 
-  link: <%= linkType %>
+  link: <%= link %>
   answer: /some\sregex/ (optional)
-
+  
 <% } %>
 standards: 
   cs.identify-linear-collection-data-structures-usage.0: 1000 
@@ -28,7 +28,9 @@ standards:
 
 links:
 
-  - '[link to official documentation](https://enki.com)'
-  - '[link to deeper dive blog post](https://enki.com)'
-  - '[link to a video](https://enki.com)'
-  - '[link to a discussion](https://enki.com)'
+- '[link to official documentation](https://enki.com)'
+- '[link to deeper dive blog post](https://enki.com)'
+- '[link to a video](https://enki.com)'
+- '[link to a discussion](https://enki.com)'
+---        
+# <%= headline %>

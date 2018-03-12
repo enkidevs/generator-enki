@@ -1,5 +1,5 @@
 <%- include('_header'); %>
----
+
 ## Content
 
 Game description goes here
