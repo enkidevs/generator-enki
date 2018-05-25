@@ -1,5 +1,4 @@
 <%- include('_header'); %>
-
 ## Content
 
 Start by writing the questions- what are you trying to show the user how to do?
