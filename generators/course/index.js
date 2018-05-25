@@ -10,8 +10,7 @@ module.exports = generators.Base.extend({
     generators.Base.apply(this, arguments)
     this.sections = []
     try {
-      this.sections = yaml.safeLoad(fs.readFileSync(path.join(process.cwd(), 'README.md'), 'utf8')).sections
-      console.log(this.sections)
+      this.sections = yaml.safeLoad(fs.readFileSync(path.join(process.cwd(), 'README.md'), 'utf8'))
     } catch (e) {
       console.log(e)
     }
@@ -24,7 +23,7 @@ module.exports = generators.Base.extend({
       message: 'What\'s the course\'s name?'
     }, {
       type: 'input',
-      name: 'name',
+      name: 'sections',
       message: 'How many sections in this course?'
     }]
 
@@ -34,7 +33,6 @@ module.exports = generators.Base.extend({
   },
 
   writing: function () {
-    this.answers.section = typeof this.sections.indexOf(this.answers.section) !== 'undefined' ? this.sections.indexOf(this.answers.section) : -1
     this.fs.copyTpl(
       this.templatePath('course.md'),
       this.destinationPath(this.answers.name.replace(/#/g, 'sharp') + '/README.md'),
