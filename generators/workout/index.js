@@ -42,7 +42,7 @@ module.exports = generators.Base.extend({
   },
 
   writing: function () {
-    this.answers.section = typeof this.sections.indexOf(this.answers.section) !== undefined ? this.sections.indexOf(this.answers.section) : -1
+    this.answers.section = typeof this.sections.indexOf(this.answers.section) !== 'undefined' ? this.sections.indexOf(this.answers.section) : -1
     this.fs.copyTpl(
       this.templatePath('workout.md'),
       this.destinationPath(toSlugCase(this.answers.name) + '/README.md'),

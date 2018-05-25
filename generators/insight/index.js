@@ -1,6 +1,6 @@
 const generators = require('yeoman-generator')
 const toSlugCase = require('to-slug-case')
-const { URL } = require('url');
+const { URL } = require('url')
 
 module.exports = generators.Base.extend({
   // The name `constructor` is important here
@@ -111,13 +111,16 @@ module.exports = generators.Base.extend({
 
   writing: function () {
     const fileName = this.answers.type + '.md'
-    switch(this.answers.type) {
+    switch (this.answers.type) {
       case 'Insight':
         this.answers.type = 'normal'
+        break
       case 'Game':
         this.answers.type = this.answers.gameType
+        break
       case 'Exercise':
         this.answers.type = 'exercise'
+        break
     }
     this.fs.copyTpl(
       this.templatePath(fileName),

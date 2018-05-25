@@ -1,9 +1,8 @@
+name: Topic Display Name
+
 language: <%= language %>
 
 color: '<%= color %>'
-
-sections:
-  - list of topic sections (group of courses)
 
 description: Description of the topic goes here
 
