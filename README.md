@@ -20,7 +20,8 @@ yo enki:workout
 Available templates:
 
 - `yo enki` will produce an insight template, or an exercise template
-- `yo enki:workout` will produce a topic template
-- `yo enki:topic` will generate a topic
-- `yo enki:subtopic` will generate a subtopic
+- `yo enki:workout` will produce a workout template
+- `yo enki:subtopic` will generate a subtopic template
+- `yo enki:topic` will generate a topic template
+
 
