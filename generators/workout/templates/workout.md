@@ -1,7 +1,5 @@
 name: <%= name %>
 
-type: Insights list
-
 description: Description of the workout goes here
 
 insights:
