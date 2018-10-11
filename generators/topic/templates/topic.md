@@ -1,4 +1,4 @@
-name: Topic Display Name
+name: <%= name %>
 
 language: <%= language %>
 
