@@ -1,10 +1,8 @@
 {
   "name": "generator-enki",
-  "version": "0.5.8",
+  "version": "0.6.0",
   "description": "Generates templates for Enki content",
-  "scripts": {
-    "test": "standard"
-  },
+  "scripts": {},
   "files": [
     "generators/app",
     "generators/insight",
@@ -16,8 +14,6 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "js-yaml": "3.8.4",
-    "to-slug-case": "1.0.0",
     "yeoman-generator": "^0.24.1"
   },
   "devDependencies": {
