@@ -1,6 +1,6 @@
 {
   "name": "generator-enki",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Generates templates for Enki content",
   "scripts": {},
   "files": [
@@ -8,7 +8,8 @@
     "generators/insight",
     "generators/subtopic",
     "generators/topic",
-    "generators/workout"
+    "generators/workout",
+    "helpers"
   ],
   "keywords": [
     "yeoman-generator"
