@@ -1,7 +1,4 @@
 const generators = require("yeoman-generator");
-const yaml = require("js-yaml");
-const fs = require("fs");
-const path = require("path");
 const { slugify, hasForbiddenCharacters } = require("../../helpers");
 
 module.exports = generators.Base.extend({

@@ -9,7 +9,8 @@
     "generators/app",
     "generators/insight",
     "generators/subtopic",
-    "generators/topic"
+    "generators/topic",
+    "generators/workout"
   ],
   "keywords": [
     "yeoman-generator"
