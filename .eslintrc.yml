@@ -1,0 +1,4 @@
+extends:
+  - '@enkidevs/eslint-config-base'
+parserOptions:
+    ecmaVersion: 6
