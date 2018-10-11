@@ -1,9 +1,15 @@
-name: Course Display Name
+name: <%= name %>
 
-core: false
+core: <%= core %>
+
+description: Description of the course goes here
 
 sections:
-	- list of sections of the course
+	'0':
+		- workout-slug-1
+		- workout-slug-2
+	'1':
+		- workout-slug-3
 
 standards:
 	standard-slug:
@@ -23,8 +29,4 @@ standards:
 			2: add objectives about interstitial learning steps to cover
 			3: also add higher-level objectives towards the end that are more advanced than the first few
 
-description: Description of the course goes here
-
-icon: Optional icon. Go to https://enkidevs.github.io/svgomg/ and copy the "Enki Topic Code" here. (or remove this line)
-
-next: topic-slug:next-course-slug
+<%= nextSection %>

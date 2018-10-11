@@ -3,7 +3,9 @@ name: <%= name %>
 description: Description of the workout goes here
 
 insights:
-  - list-of-insight-slugs-in-order
+  - insight-slug-1
+  - insight-slug-2
 
 exercises:
-  - list-of-exercise-slugs-in-order
+  - practice-exercise-slug-1
+  - practice-exercise-slug-2

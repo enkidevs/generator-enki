@@ -1,25 +1,25 @@
 {
   "name": "generator-enki",
-  "version": "0.5.8",
+  "version": "0.6.0",
   "description": "Generates templates for Enki content",
-  "scripts": {
-    "test": "standard"
-  },
+  "scripts": {},
   "files": [
     "generators/app",
     "generators/insight",
     "generators/subtopic",
-    "generators/topic"
+    "generators/topic",
+    "generators/workout"
   ],
   "keywords": [
     "yeoman-generator"
   ],
   "dependencies": {
-    "js-yaml": "3.8.4",
-    "to-slug-case": "1.0.0",
     "yeoman-generator": "^0.24.1"
   },
   "devDependencies": {
-    "standard": "8.5.0"
+    "eslint": "^5.6.1",
+    "prettier": "^1.14.3",
+    "eslint-plugin-promise": "^4.0.1",
+    "@enkidevs/eslint-config-base": "^0.2.4"
   }
 }
