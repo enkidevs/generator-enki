@@ -1,6 +1,6 @@
 {
   "name": "generator-enki",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Generates templates for Enki content",
   "scripts": {},
   "files": [
@@ -9,6 +9,7 @@
     "generators/subtopic",
     "generators/topic",
     "generators/workout",
+    "generators/course",
     "helpers"
   ],
   "keywords": [
